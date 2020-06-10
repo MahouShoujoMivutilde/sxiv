@@ -51,7 +51,7 @@ static const bool ALPHA_LAYER = false;
 static const int thumb_sizes[] = { 96, 192, 288, 384, 480 };
 
 /* thumbnail size at startup, index into thumb_sizes[]: */
-static const int THUMB_SIZE = 4;
+static const int THUMB_SIZE = 3;
 
 #endif
 #ifdef _MAPPINGS_CONFIG
@@ -63,7 +63,7 @@ static const keymap_t keys[] = {
 	{ 0,            XK_Return,        g_switch_mode,        None },
 	{ 0,            XK_f,             g_toggle_fullscreen,  None },
 	{ 0,            XK_b,             g_toggle_bar,         None },
-	{ ControlMask,  XK_x,             g_prefix_external,    None },
+	{ 0,            XK_x,             g_prefix_external,    None },
 	{ 0,            XK_g,             g_first,              None },
 	{ 0,            XK_G,             g_n_or_last,          None },
 	{ 0,            XK_r,             g_reload_image,       None },
