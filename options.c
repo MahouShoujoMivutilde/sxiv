@@ -57,15 +57,15 @@ void parse_options(int argc, char **argv)
 
 	_options.scalemode = SCALE_DOWN;
 	_options.zoom = 1.0;
-	_options.animate = false;
+	_options.animate = true;
 	_options.gamma = 0;
 	_options.slideshow = 0;
 	_options.framerate = 0;
 
 	_options.fullscreen = false;
 	_options.embed = 0;
-	_options.hide_bar = false;
-	_options.swap_bar = false;
+	_options.hide_bar = true;
+	_options.swap_bar = true;
 	_options.geometry = NULL;
 	_options.res_name = NULL;
 
@@ -86,16 +86,16 @@ void parse_options(int argc, char **argv)
 				_options.framerate = n;
 				/* fall through */
 			case 'a':
-				_options.animate = true;
+				_options.animate = false;
 				break;
 			case 'b':
-				_options.hide_bar = true;
+				_options.hide_bar = false;
 				break;
 			case 'c':
 				_options.clean_cache = true;
 				break;
 			case 'd':
-				_options.swap_bar = true;
+				_options.swap_bar = false;
 				break;
 			case 'e':
 				n = strtol(optarg, &end, 0);
