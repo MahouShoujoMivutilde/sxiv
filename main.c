@@ -352,7 +352,15 @@ void update_info(void)
 {
 	unsigned int i, fn, fw;
 	const char * mark;
+	char title[512];
 	win_bar_t *l = &win.bar.l, *r = &win.bar.r;
+
+	/* update title contents */
+	snprintf(title, sizeof(title), "%s - %d/%d (%d%%) %s",
+	    files[fileidx].name, fileidx + 1, filecnt,
+	    (int) (img.zoom * 100.0),
+	    files[fileidx].flags & FF_MARK ? "*" : "");
+	win_set_title(&win, title);
 
 	/* update bar contents */
 	if (win.bar.h == 0)
